@@ -38,6 +38,9 @@ async function newClient(addr, password, name) {
         callOf(name, funcName, ...args) {
             if (clientClosed) throw new Error("Client was closed");
             return this.of(name).call(funcName, ...args);
+        },
+        async getOthers() {
+            return await client.getOthers();
         }
     }
 }

@@ -45,7 +45,11 @@ let resp = await s1.call( "func3"  , arg1, arg2, arg3 ...);
 // ===============================================
 
 // Call function of Service1 without need to create 'of' object for 'Service1'. Just call it and all
-let resp = let client.callOf("Service1", "someFunc", arg1, arg2, arg3 ...);
+let resp = await client.callOf("Service1", "someFunc", arg1, arg2, arg3 ...);
+
+
+// Get list of other client names.
+let list = await client.getOthers();
 
 // Close client.
 // We can't then communicate with server if we do so
