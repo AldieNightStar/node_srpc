@@ -1,0 +1,23 @@
+{
+  "name": "srpc",
+  "version": "1.0.0",
+  "description": "NodeSocketer based RPC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AldieNightStar/node_srpc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AldieNightStar/node_srpc/issues"
+  },
+  "homepage": "https://github.com/AldieNightStar/node_srpc#readme",
+  "dependencies": {
+    "wsocketer": "github:AldieNightstar/node_socketer"
+  }
+}
