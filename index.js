@@ -82,4 +82,4 @@ function awaitOrTimeout(promise, ms) {
 	return Promise.race([promise, timer]);
 }
 
-module.exports = { newServer }
+module.exports = { newServer, newClient }
