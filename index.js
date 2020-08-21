@@ -82,29 +82,4 @@ function awaitOrTimeout(promise, ms) {
 	return Promise.race([promise, timer]);
 }
 
-
-
-// TEST
-async function main() {
-    newServer(8080, "s");
-    
-    let c1 = await newClient("ws://localhost:8080", "s", "cc1");
-    c1.funcs.getName = (sender) => {
-        return "Harold!"
-    };
-
-
-    let c2 = await newClient("ws://localhost:8080", "s", "cc2");
-    c2.funcs.greet = async (sender) => {
-        let name = await c2.of("cc1").call("getName")
-        return "Hello, " + name;
-    };
-
-    console.log(c1);
-    let s = await c1.of("cc2").call("greet");
-    console.log(s);
-}
-
-main();
-
 module.exports = { newServer }
